@@ -1,0 +1,10 @@
+{
+  "name": "Sustainify",
+  "description": "An eco-friendly recommender system.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "sustainify.html",
+    "default_icon": "sustainify_small.png"
+  }
+}

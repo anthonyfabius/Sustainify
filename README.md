@@ -24,6 +24,7 @@ An eco-friendly recommender system that helps you make sustainable shopping choi
 ## Usage
 
 - Navigate to a supported online shopping site.  
+  - Currently supported sites: Amazon, Walmart, Target, Ebay, and Etsy
 - Click on the Sustainify extension icon.  
 - View eco-friendlier alternatives for the product you’re viewing.  
 
@@ -40,4 +41,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License.  
+This project is licensed under the MIT License.

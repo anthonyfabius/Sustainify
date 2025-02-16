@@ -15,7 +15,9 @@
   "host_permissions": [
     "*://www.amazon.com/*",
     "*://www.ebay.com/*",
-    "*://www.etsy.com/*"
+    "*://www.etsy.com/*",
+    "*://www.walmart.com/*",
+    "*://www.target.com/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -25,7 +27,9 @@
       "matches": [
         "*://www.amazon.com/*",
         "*://www.ebay.com/*",
-        "*://www.etsy.com/*"
+        "*://www.etsy.com/*",
+        "*://www.walmart.com/*",
+        "*://www.target.com/*"
       ],
       "js": ["content.js"]
     }

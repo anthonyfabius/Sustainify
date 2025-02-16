@@ -83,7 +83,26 @@ document.addEventListener("DOMContentLoaded", function(){
         const alternatives = await getAlternatives(productName);
         alternativesList.innerHTML = `<p>${alternatives.replace(/\n/g, "<br>")}</p>`
 
-        //? Get for first alternative
+        const firstAltMatch = alternatives.match(/Alternative 1: (.+)/);
+        if (firstAltMatch) {
+          const firstAlternative = firstAltMatch[1].trim();
+          const encodedAlt = encodeURIComponent(firstAlternative);
+
+          const amazonURL = `https://www.amazon.com/s?k=${encodedAlt}`;
+          const ebayURL = `https://www.ebay.com/sch/i.html?_nkw=${encodedAlt}`;
+          const etsyURL = `https://www.etsy.com/search?=${encodedAlt}`;
+
+          const searchLinks = `
+          <p><strong>Find "${firstAlternative}" on:</strong>
+          <span class="search-links">
+            <a href="${amazonURL}" target="_blank" rel="noopener noreferrer"> Amazon </a>,
+            <a href="${ebayURL}" target="_blank" rel="noopener noreferrer"> eBay </a>,
+            <a href="${etsyURL}" target="_blank" rel="noopener noreferrer"> Etsy </a>
+          </span>
+          </p>
+          `;
+          alternativesList.innerHTML += searchLinks;
+        }
       } catch (error) {
         console.error("Error fetching alternatives:", error);
         alternativesList.innerHTML = "<p>Failed to load alternatives. Please try again.</p>";

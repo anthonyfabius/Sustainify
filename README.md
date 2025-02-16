@@ -16,9 +16,10 @@ An eco-friendly recommender system that helps you make sustainable shopping choi
    git clone https://github.com/yourusername/sustainify.git
    ```
 
-2. Open Chrome and go to `chrome://extensions/`.  
-3. Enable **Developer mode**.  
-4. Click on **Load unpacked** and select the cloned repository folder.  
+2. Change `config.json` to include your openai api key.
+3. Open Chrome and go to `chrome://extensions/`.  
+4. Enable **Developer mode**.  
+5. Click on **Load unpacked** and select the cloned repository folder.  
 
 ## Usage
 
@@ -31,7 +32,7 @@ An eco-friendly recommender system that helps you make sustainable shopping choi
 - **JavaScript** – Core functionality of the extension.  
 - **HTML/CSS** – User interface.  
 - **Chrome Extension API** – Integration with the browser.  
-- **ChatGPT** - AI Tailored explanations.
+- **ChatGPT** - AI Tailored explanations & recommendations.
 
 ## Contributing
 

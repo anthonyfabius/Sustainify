@@ -5,6 +5,29 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "sustainify.html",
-    "default_icon": "sustainify_small.png"
-  }
+    "default_icon": "images/sustainify_small.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.amazon.com/*",
+    "*://www.ebay.com/*",
+    "*://www.etsy.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.amazon.com/*",
+        "*://www.ebay.com/*",
+        "*://www.etsy.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
 }

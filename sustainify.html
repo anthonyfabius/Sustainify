@@ -7,15 +7,25 @@
   <link rel="stylesheet" href="sustainify.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="main-screen">
     <h1>Sustainify</h1>
     <p>An eco-friendly recommender system</p>
     <div class="detecting">
       Detecting... <br>
-      <strong>Product Name</strong>
+      <strong id="product-name">No product detected</strong>
     </div>
-    <button class="alt-button">Alternatives</button>
-    <div class="leaves">leaves</div>
+    <button class="alt-button" id="find-alternatives">Alternatives</button>
   </div>
+
+  <div class="container" id="alternatives-screen" style="display: none;">
+    <h1>Alternatives</h1>
+    <p>Here are 3 eco-friendly alternatives:</p>
+    <ul id="alternatives-list">
+      <li>No alternatives found yet...</li>
+    </ul>
+    <button class="alt-button" id="back-button">Back</button>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>

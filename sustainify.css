@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans:wght@100..800&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   text-align: center;
   background-color: #F8EDE3;
   color: #798777;
@@ -7,13 +9,14 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 42px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 0;
 }
 
@@ -26,12 +29,34 @@ p {
 .alt-button {
   background-color: #798777;
   color: white;
-  font-size: 18px;
+  font-family: "Nunito";
+  font-size: 20px;
   padding: 10px 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.alt-button::before,
+.alt-button::after {
+    content: "";
+    background-image: url("images/leaf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.alt-button::before {
+  left: 40px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.alt-button::after {
+  right: 40px;
 }
 
 .alt-button:hover {
@@ -44,8 +69,4 @@ p {
   border-radius: 15px;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.leaves {
-  font-size: 24px;
 }
